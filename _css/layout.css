@@ -19,7 +19,7 @@ html, body{
 	bottom: 0px;
 }
 
-#content{
+#container{
 	position: absolute;
 	left: 0px;
 	right: 0px;
@@ -46,10 +46,18 @@ html, body{
 }
 
 .navItem{
+	position: relative;
 	display: inline-block;
 	width: 18%;
 	height: 30px;
 	padding-top: 3px;
+	margin-top: -10px;
+}
+
+.navItem.current{
+	height: 40px;
+	padding-top: 13px;
+	top: 10px;
 }
 
 #logo img{

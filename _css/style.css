@@ -16,7 +16,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
-#content{
+#container{
 	background-color: #FFFFFF;
 	border-left: 1px #000000 solid;
 	border-right: 1px #000000 solid;
