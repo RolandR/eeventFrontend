@@ -26,3 +26,11 @@
 .attachedImage{
 	cursor: pointer;
 }
+
+.buildingImage{
+	
+}
+
+.buildingImage img{
+	border: 1px #000000 solid;
+}

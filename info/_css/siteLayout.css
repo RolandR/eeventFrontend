@@ -1,22 +1,28 @@
-
-
-.newsElement{
-	
+#googleMaps{
+	margin-left: 50px;
+	margin-bottom: 50px;
+	width: 640px;
 }
 
-.newsDate{
-	display: block;
-	width: 100%;
-	text-align: right;
-	height: 0px;
+#googleMaps a{
+	float: right;
 }
 
-.newsAttachments{
-	margin-top: 20px;
-}
-
-.attachedImage{
+#loginBox{
 	display: inline-block;
-	margin: 10px;
-	width: 150px;
+}
+
+.buildingImage{
+	width: 640px;
+	margin-left: 50px;
+	margin-bottom: 100px;
+}
+
+.buildingImage *{
+	display: block;
+	margin-bottom: 5px;
+}
+
+.buildingImage .imageSubtitle{
+	float: right;
 }

@@ -42,8 +42,13 @@ a:hover{
 	color: #1C55E7
 }
 
-input{
+input, select{
 	color: #001D58;
+	border: 1px #001D58 solid;
+}
+
+iframe{
+	border: 1px #000000 solid;
 }
 
 #container{
@@ -85,17 +90,26 @@ input{
 }
 
 .buttonLook{
-	background: rgb(255,255,255); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(219,219,219,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%); /* IE10+ */
-	background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
+	cursor: pointer;
+	border: 1px #AAAAAA solid;
+	color: #001D58;
+	
+	
+	background: rgb(252,252,252); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(252,252,252,1) 0%, rgba(197,203,223,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(197,203,223,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(252,252,252,1) 0%,rgba(197,203,223,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(252,252,252,1) 0%,rgba(197,203,223,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(252,252,252,1) 0%,rgba(197,203,223,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(252,252,252,1) 0%,rgba(197,203,223,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#c5cbdf',GradientType=0 ); /* IE6-9 */
 }
 
 .buttonLook:hover{
+	color: #FFFFFF;
+	border: 1px #001D58 solid;
+	
+	
 	background: rgb(126,155,229); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(126,155,229,1) 0%, rgba(0,29,88,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(126,155,229,1)), color-stop(100%,rgba(0,29,88,1))); /* Chrome,Safari4+ */
@@ -116,13 +130,10 @@ input{
 }
 
 #login input{
-	border: 1px #001D58 solid;
+	
 }
 
 #login #loginSubmit{
-	cursor: pointer;
-	border: 1px #AAAAAA solid;
-	color: #001D58;
 	font-size: 1.2em;
 }
 
@@ -132,6 +143,7 @@ input{
 
 #footer{
 	border-top: 1px #000000 solid;
+	box-shadow: 0px 10px 40px #000000;
 	
 	background: rgb(255,255,255); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%); /* FF3.6+ */
@@ -158,7 +170,7 @@ input{
 
 .box.infoBox{
 	border: 1px #001D58 solid;
-	color: #CCCCCC;
+	color: #EEEEEE;
 	
 	background: rgb(0,29,88); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(0,29,88,1) 0%, rgba(28,85,231,1) 100%); /* FF3.6+ */
@@ -196,8 +208,22 @@ input{
 
 .important{
 	font-size: 1.1em;
+	color: #1C55E7;
 }
 
+.infoBox .important{
+	color: #FFFFFF;
+}
+
+.formSubmitButton{
+	border: 1px #AAAAAA solid;
+	font-size: 1.2em;
+}
+
+.formSpacer{
+	background-color: #001D58;
+	height: 1px;
+}
 
 
 

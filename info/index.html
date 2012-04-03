@@ -15,8 +15,8 @@
 		<link rel="stylesheet" type="text/css" href="../_css/layout.css" />
 		<link rel="stylesheet" type="text/css" href="../_css/style.css" />
 		
-		<link rel="stylesheet" type="text/css" href="../_css/siteLayout.css" />
-		<link rel="stylesheet" type="text/css" href="../_css/siteStyle.css" />
+		<link rel="stylesheet" type="text/css" href="./_css/siteLayout.css" />
+		<link rel="stylesheet" type="text/css" href="./_css/siteStyle.css" />
 		
 	</head>
 	<body>
@@ -51,14 +51,17 @@
 							Vergesslich?
 						</a>
 						<a id="loginRegister" href="../register">
-							Anmelden
+							Registrieren
 						</a>
 					</div>
 				</div>
 				<div id="content">
 					<h1>
-						Die n&auml;chste LAN kommt bestimmt.
+						Die n&auml;chste LAN.
 					</h1>
+					<p>
+						Wir freuen uns, die n&auml;chste eevent-LAN ank&uuml;ndigen zu k&ouml;nnen.
+					</p>
 					<div class="box infoBox">
 						<span class="infoBoxTitle">
 							Das Wichtigste in K&uuml;rze.
@@ -73,9 +76,10 @@
 								Durchf&uuml;hrungsort
 							</span>
 							<address>
-								Mehrzweckhalle<br />
-								Beispielsstrasse 12<br />
-								1337 Vallorbe<br />
+								Phool Baag<br />
+								Panj Gola Road<br />
+								Khairpur<br />
+								Pakistan<br />
 							</address>
 						</p>
 						<p>
@@ -130,9 +134,161 @@
 							</table>
 						</p>
 					</div>
+					<a name="register"></a>
 					<h2>
-						Durchf&uuml;hrungsort.
+						Teilnahme.
 					</h2>
+					<p>
+						Du m&ouml;chtest an der LAN-Party teilnehmen?<br />
+						F&uuml;ll einfach das Formular aus und du bist dabei.<br />
+						<span class="important">
+							Achtung: Die Anmeldung ist verbindlich.
+						</span>
+						<div class="box" id="loginBox">
+							<form id="registerToLan">
+								<table class="formTable">
+									<tr>
+										<td width="120">
+											<label name="name">
+												Name
+											</label>
+										</td>
+										<td>
+											<input name="name" type="text" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label name="name">
+												Vorname
+											</label>
+										</td>
+										<td>
+											<input name="name" type="text" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label name="name">
+												Strasse, Nr
+											</label>
+										</td>
+										<td>
+											<input name="name" type="text" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label name="name">
+												PLZ, Ort
+											</label>
+										</td>
+										<td>
+											<input name="name" type="text" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label name="name">
+												Land
+											</label>
+										</td>
+										<td>
+											<input name="name" type="text" />
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<hr class="formSpacer"/>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label name="name">
+												Dauer
+											</label>
+										</td>
+										<td>
+											<select name="name" >
+												<option	value="ganz" selected="true">
+													Ganze LAN
+												</option>
+												<option	value="tag">
+													Ein Tag (bis 24h)
+												</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label name="name">
+												Zahlungsart
+											</label>
+										</td>
+										<td>
+											<select name="name" >
+												<option	value="vorkasse" selected="true">
+													Vorkasse
+												</option>
+												<option	value="abendkasse">
+													Abendkasse
+												</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Preis
+										</td>
+										<td>
+											CHF 40.-
+										</td>
+									</tr>
+									<tr>
+										<td>
+										</td>
+										<td>
+											<input class="buttonLook formSubmitButton" type="submit" name="submit" value="Teilnehmen" />
+										</td>
+									</tr>
+								</table>
+							</form>
+						</div>
+					</p>
+					<h2>
+						Anreise.
+					</h2>
+					<p>
+						Anfahrt per Auto beschreiben<br />
+						Anfahrt per Auto beschreiben<br />
+						Anfahrt per Auto beschreiben<br />
+					</p>
+					<p>
+						Parkpl&auml;tze, yay<br />
+						Parkpl&auml;tze, yay<br />
+					</p>
+					<p>
+						Anfahrt per &ouml;V beschreiben<br />
+						Anfahrt per &ouml;V beschreiben<br />
+						Anfahrt per &ouml;V beschreiben<br />
+						Anfahrt per &ouml;V beschreiben<br />
+					</p>
+					<!-- Google maps stuff -->
+					<div id="googleMaps">
+						<iframe width="640" height="480" frameborder="0" marginwidth="0"  scrolling="no" src="http://maps.google.com/?ie=UTF8&amp;t=m&amp;ll=27.527121,68.759415&amp;spn=0.004567,0.006866&amp;z=17&amp;iwloc=lyrftr:m,16817314040616818191,27.526236,68.758621&amp;output=embed">
+						</iframe>
+						<br />
+						<a href="http://maps.google.com/?ie=UTF8&amp;t=m&amp;ll=27.527121,68.759415&amp;spn=0.004567,0.006866&amp;z=17&amp;iwloc=lyrftr:m,16817314040616818191,27.526236,68.758621&amp;source=embed">
+						Google Maps
+						</a>
+					</div>
+					<!-- /Google maps stuff -->
+					<div class="buildingImage">
+						<img src="../_media/info/building.JPG" alt="" title="" />
+						<span class="imageSubtitle">
+							Hier findet die LAN statt.
+						</span>
+					</div>
 				</div>
 				<div id="footer">
 					Copyright and shit
@@ -142,6 +298,14 @@
 	</body>
 		
 </html>
+
+
+
+
+
+
+
+
 
 
 
