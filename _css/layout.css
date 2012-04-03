@@ -103,14 +103,20 @@ html, body{
 	position: absolute;
 	right: 10px;
 	width: 60px;
-	top: 37px;
+	top: 10px;
 	height: 49px;
+}
+
+#login #loginForgotten{
+	position: absolute;
+	left: 10px;
+	top: 70px;
 }
 
 #login #loginRegister{
 	position: absolute;
 	right: 10px;
-	top: 10px;
+	top: 70px;
 }
 
 #content{
@@ -137,7 +143,16 @@ html, body{
 	padding-top: 5px;
 }
 
+.box{
+	margin-bottom: 20px;
+	padding: 10px;
+}
 
+.box.infoBox{
+	margin-left: 50px;
+	margin-right: 50px;
+	padding: 10px;
+}
 
 
 
