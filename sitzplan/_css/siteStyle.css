@@ -1,0 +1,92 @@
+/*
+Colors
+
+#001D58
+#1C55E7
+#9CB3ED
+
+
+*/
+
+
+
+.room{
+	border: 1px #001D58 solid;
+}
+
+.seatGroup{
+}
+
+.seat{
+	border: 1px #000000 solid;
+	cursor: pointer;
+	font-size: 0.85em;
+	background-color: #FFFFFF;
+}
+
+.seat:hover{
+	background-color: #1C55E7;
+}
+
+.seat.occupied{
+	color: #FFFFFF;
+	cursor: default;
+	
+	background: rgb(0,29,88); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(0,29,88,1) 0%, rgba(28,85,231,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,29,88,1)), color-stop(100%,rgba(28,85,231,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,29,88,1) 0%,rgba(28,85,231,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,29,88,1) 0%,rgba(28,85,231,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,29,88,1) 0%,rgba(28,85,231,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(0,29,88,1) 0%,rgba(28,85,231,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001d58', endColorstr='#1c55e7',GradientType=0 ); /* IE6-9 */
+}
+
+.seatLabel{
+	font-size: 1.3em;
+	color: #000000;
+	border: 1px #AAAAAA solid;
+	
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(219,219,219,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
+}
+
+.seat.occupied:hover{
+	background: #AAAAAA;
+}
+
+.seat.occupied:hover .seatLabel{
+
+}
+
+.roomArea{
+	border: 1px #1C55E7 solid;
+	background-color: #E2EAFF;
+}
+
+.roomArea .areaTitle{
+	color: #001D58;
+	font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
