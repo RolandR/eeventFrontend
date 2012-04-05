@@ -156,6 +156,7 @@ select{
 	height: 35px;
 	padding-left: 20px;
 	padding-top: 5px;
+	z-index: 20000;
 }
 
 .box{

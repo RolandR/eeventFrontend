@@ -1,11 +1,33 @@
 .room{
-	width: 800px;
-	height: 500px;
 	position: absolute;
+	margin-bottom: 100px;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+#room{
+	width: 620px;
+	height: 1200px;
+}
+
+.roomLoading{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 15000;
+}
+
+.roomLoading img{
+	position: fixed;
+	margin-left: 240px;
+	margin-top: 110px;
 }
 
 .seatGroup{
 	position: absolute;
+	z-index: 5000;
 }
 
 .seat{
@@ -36,7 +58,4 @@
 .roomArea{
 	position: absolute;
 	text-align: center;
-}
-
-.roomArea .areaTitle{
 }

@@ -11,26 +11,43 @@ Colors
 
 
 .room{
-	border: 1px #001D58 solid;
+}
+
+.roomLoading{
+	background: #FFFFFF;
+	opacity: 0.7;
 }
 
 .seatGroup{
 }
 
 .seat{
-	border: 1px #000000 solid;
+	border: 1px #AAAAAA solid;
 	cursor: pointer;
-	font-size: 0.85em;
-	background-color: #FFFFFF;
+	font-size: 0.8em;
+	vertical-align: middle;
+	line-height: 1.7;
+	
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(219,219,219,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
 }
 
 .seat:hover{
-	background-color: #1C55E7;
+	background: #1C55E7;
+	color: #FFFFFF;
+	border: 1px #001D58 solid;
 }
 
 .seat.occupied{
 	color: #FFFFFF;
 	cursor: default;
+	border: 1px #001D58 solid;
 	
 	background: rgb(0,29,88); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(0,29,88,1) 0%, rgba(28,85,231,1) 100%); /* FF3.6+ */
@@ -68,9 +85,6 @@ Colors
 .roomArea{
 	border: 1px #1C55E7 solid;
 	background-color: #E2EAFF;
-}
-
-.roomArea .areaTitle{
 	color: #001D58;
 	font-weight: 300;
 }
