@@ -24,9 +24,9 @@ Colors
 .seat{
 	border: 1px #AAAAAA solid;
 	cursor: pointer;
-	font-size: 0.8em;
+	font-size: 0.7em;
 	vertical-align: middle;
-	line-height: 1.7;
+	line-height: 2.1;
 	
 	background: rgb(255,255,255); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%); /* FF3.6+ */
@@ -60,7 +60,7 @@ Colors
 }
 
 .seatLabel{
-	font-size: 1.3em;
+	font-size: 1.5em;
 	color: #000000;
 	border: 1px #AAAAAA solid;
 	
@@ -76,10 +76,11 @@ Colors
 
 .seat.occupied:hover{
 	background: #AAAAAA;
+	border: 1px #AAAAAA solid;
 }
 
 .seat.occupied:hover .seatLabel{
-
+	line-height: 1.5;
 }
 
 .roomArea{

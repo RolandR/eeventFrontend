@@ -39,6 +39,10 @@
 	text-align: center;
 }
 
+.seatGroup:hover{
+	z-index: 40000;
+}
+
 .seatLabel{
 	display: none;
 	position: relative;
@@ -48,7 +52,7 @@
 	width: 180px;
 	text-align: center;
 	padding-top: 5px;
-	z-index: 10000;
+	z-index: 50000;
 }
 
 .seat.occupied:hover .seatLabel{
@@ -59,3 +63,18 @@
 	position: absolute;
 	text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

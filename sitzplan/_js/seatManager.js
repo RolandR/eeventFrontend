@@ -1,5 +1,9 @@
 $(document).ready(function(){
 	
+	var user = {
+		username: 'JanitorMaster',
+		clan: 'Eevent Staff'
+	};
 	
 	var seatLayout = [
 		{
@@ -36,7 +40,7 @@ $(document).ready(function(){
 		},
 		{
 			type: 'seatGroup',
-			startingId: 0,
+			startingId: 96,
 			width: 2,
 			seatAmount: 24,
 			x: 50,
@@ -44,7 +48,7 @@ $(document).ready(function(){
 		},
 		{
 			type: 'seatGroup',
-			startingId: 24,
+			startingId: 120,
 			width: 2,
 			seatAmount: 24,
 			x: 200,
@@ -52,7 +56,7 @@ $(document).ready(function(){
 		},
 		{
 			type: 'seatGroup',
-			startingId: 48,
+			startingId: 144,
 			width: 2,
 			seatAmount: 24,
 			x: 350,
@@ -60,7 +64,7 @@ $(document).ready(function(){
 		},
 		{
 			type: 'seatGroup',
-			startingId: 72,
+			startingId: 168,
 			width: 2,
 			seatAmount: 24,
 			x: 500,
@@ -124,18 +128,7 @@ $(document).ready(function(){
 		}
 	];
 	
-	var occupiedSeats = [
-		{
-			seatId: 4,
-			username: 'JanitorMaster',
-			clan: 'Eevent Staff'
-		},
-		{
-			seatId: 60,
-			username: 'Dude',
-			clan: 'DudeClan'
-		}
-	];
+	var occupiedSeats = [];
 	
 	var config = {
 		seatSize: 25,
@@ -146,19 +139,24 @@ $(document).ready(function(){
 		seatLayout,
 		occupiedSeats,
 		config,
+		user,
 		$('#room'),
-		$('#roomLoading')
+		$('#roomLoading'),
+		'.seat:not(.occupied)'
 	);
 	
 	function SeatManager(
 		seatLayout,
 		occupiedSeats,
 		config,
+		user,
 		roomElement,
-		loadingOverlayElement
+		loadingOverlayElement,
+		seatElementsClass
 	){
 		
 		initLayout(seatLayout);
+		initSeats();
 		
 		function initLayout(seatLayout){
 			for(item in seatLayout){
@@ -169,7 +167,6 @@ $(document).ready(function(){
 					addArea(currentElement);
 				}
 			}
-			loadingOverlayElement.css('display', 'none');
 		}
 		
 		function addSeatGroup(seatGroup){
@@ -184,11 +181,15 @@ $(document).ready(function(){
 				var seatId = i + seatGroup.startingId;
 				var seatElement = $('<div></div>');
 				seatElement.addClass('seat');
+				seatElement.attr('id', 'seat'+seatId);
 				seatElement.attr('seatId', seatId);
 				seatElement.css('width', config.seatSize);
 				seatElement.css('height', config.seatSize);
 				seatElement.css('margin', config.seatMargin);
 				seatElement.html(seatId);
+				var seatLabel = $('<div></div>');
+				seatLabel.addClass('seatLabel');
+				seatElement.append(seatLabel);
 				toAppend.append(seatElement);
 			}
 			
@@ -206,6 +207,79 @@ $(document).ready(function(){
 			
 			roomElement.append(toAppend);
 		}
+		
+		function initSeats(){
+			occupiedSeats = fetchSeatList();
+			applySeatList();
+		}
+		
+		function applySeatList(){
+			clearSeatElements();
+			for(item in occupiedSeats){
+				var currentElement = occupiedSeats[item];
+				var seatElement = $('#seat'+currentElement.seatId);
+				
+				seatElement.addClass('occupied');
+				seatElement.children('.seatLabel').html(currentElement.username+'<br />'+currentElement.clan);
+			}
+			
+			loadingOverlayElement.css('display', 'none');
+			
+		}
+		
+		function clearSeatElements(){
+			$('.seat').removeClass('occupied');
+		}
+		
+		function occupySeat(id){
+			//console.log(occupiedSeats);
+			removeOccupant(user.username);
+			//console.log(occupiedSeats);
+			var newSeat = {
+				seatId: id,
+				username: user.username,
+				clan: user.clan
+			};
+			occupiedSeats.push(newSeat);
+			applySeatList(occupiedSeats);
+			//console.log(occupiedSeats);
+		}
+		
+		function removeOccupant(username){
+			for(item in occupiedSeats){				
+				if( occupiedSeats[item].username == username){
+					occupiedSeats.splice(item, 1);
+					return true;
+				}
+			}
+			return false;
+		}
+		
+		function fetchSeatList(){
+			return [ //Get this from the server
+				{
+					seatId: 4,
+					username: 'JanitorMaster',
+					clan: 'Eevent Staff'
+				},
+				{
+					seatId: 60,
+					username: 'Dude',
+					clan: 'DudeClan'
+				}
+			];
+		}
+		
+		function sendSeatList(){
+			var toSend = occupiedSeats;
+			//Send new seat occupant list to the server
+		}
+		
+		$(seatElementsClass).click(function(){
+			loadingOverlayElement.css('display', 'block');
+			var clickedSeat = $(this);
+			occupySeat(clickedSeat.attr('seatId'));
+		});
 	}
 	
 });
